@@ -112,18 +112,18 @@
           </div>
           <div class="detail">
             <div class="tambah_tugas active">
-              <form action="#" method="post">
+              <form action="../PHP/tambahtugas.php" method="post">
                 <table>
                   <tr>
                     <td colspan="2">
-                      <label for="title">Title</label>
+                      <label for="judul">Judul</label>
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
                       <input
                         type="text"
-                        id="title"
+                        id="judul"
                         required
                         placeholder="Isikan Judul Tugas"
                       />

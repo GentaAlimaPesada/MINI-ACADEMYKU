@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../CSS/header_footer.css" />
-    <link rel="stylesheet" type="text/css" href="../CSS/sylabus.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/class.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -88,28 +88,23 @@
     <div class="content">
       <div class="table">
         <section class="table_header">
-          <div class="judul"><h1>Tambah Data Sylabus</h1></div>
-          <div class="cari">
-            <button onclick="location.href='myclass.html'">
-              <img src="../ASET/GAMBAR/close1.png" alt="logo" />
-            </button>
-          </div>
+          <div class="judul"><h1>Tambah Class</h1></div>
         </section>
         <section class="table_body">
-          <form action="#" method="post">
+          <form action="../PHP/tambahkelas.php" method="post">
             <table>
               <tr>
                 <td colspan="2">
-                  <label for="title">Title</label>
+                  <label for="nama">Nama Kelas</label>
                 </td>
               </tr>
               <tr>
                 <td colspan="2">
                   <input
                     type="text"
-                    id="title"
+                    placeholder="Masukan Nama Kelas"
+                    id="nama"
                     required
-                    placeholder="Isikan Judul Sylabus"
                   />
                 </td>
               </tr>
@@ -122,22 +117,95 @@
                 <td colspan="2">
                   <input
                     type="text"
+                    placeholder="Deskripsi Kelas"
                     id="deskripsi"
                     required
-                    placeholder="Isikan Deskripsi Sylabus"
                   />
                 </td>
               </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="harga">Harga</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    placeholder="Masukan Harga Kelas"
+                    id="harga"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="id_kategori">Kategori</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <select name="id_kategori">
+                    <?php
+                        $query = mysqli_query($koneksi, "select * from kategori");
+                        while ($data = mysqli_fetch_array($query)) {
+                        ?>
+                    <option value="<?php echo $data['id_kategori'];?>">
+                      <?php echo $data['kategori'];?>
+                    </option>
+                    <?php } ?>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="waktu">Waktu Pelaksanaan</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input type="date" id="waktu" required />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="gambar">Gambar Header Kelas</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input type="file" id="gambar" required />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="id_pengajar">Pengajar</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <select name="id_pengajar">
+                    <?php
+                        $query = mysqli_query($koneksi, "select * from level");
+                        while ($data = mysqli_fetch_array($query)) {
+                        ?>
+                    <option value="<?php echo $data['id_level'];?>">
+                      <?php echo $data['level'];?>
+                    </option>
+                    <?php } ?>
+                  </select>
+                </td>
+              </tr>
             </table>
-            <table align="center">
+            <table>
               <tr>
                 <td>
-                  <div class="submit">
+                  <div class="button">
                     <input type="reset" value="Reset" />
                   </div>
                 </td>
                 <td>
-                  <div class="submit">
+                  <div class="button">
                     <input type="submit" value="Tambah" name="tambah" />
                   </div>
                 </td>
@@ -161,5 +229,7 @@
       </center>
     </footer>
     <script src="../JS/navbar.js"></script>
+    <script src="JS/idx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>

@@ -96,32 +96,34 @@
           </div>
         </section>
         <section class="table_body">
-          <table class="list_tugas">
-            <tbody>
-              <tr class="td_button">
-                <td>Tugas Pertemuan 1_Genta Alima Persada.pdf</td>
-                <td>
-                  <div class="action">
-                    <input placeholder="Beri Nilai Disini" />
-                    <button onclick="location.href='detail_tugas.html'">
-                      Nilai
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="td_button">
-                <td>Tugas Pertemuan 2_Genta Alima Persada.pdf</td>
-                <td>
-                  <div class="action">
-                    <input placeholder="Beri Nilai Disini" />
-                    <button onclick="location.href='detail_tugas.html'">
-                      Nilai
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <form action="../PHP/berinilai.php">
+            <table class="list_tugas">
+              <tbody>
+                <tr class="td_button">
+                  <td>Tugas Pertemuan 1_Genta Alima Persada.pdf</td>
+                  <td>
+                    <div class="action">
+                      <input placeholder="Beri Nilai Disini" />
+                      <button onclick="location.href='detail_tugas.html'">
+                        Nilai
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="td_button">
+                  <td>Tugas Pertemuan 2_Genta Alima Persada.pdf</td>
+                  <td>
+                    <div class="action">
+                      <input placeholder="Beri Nilai Disini" />
+                      <button onclick="location.href='detail_tugas.html'">
+                        Nilai
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
         </section>
       </div>
     </div>
