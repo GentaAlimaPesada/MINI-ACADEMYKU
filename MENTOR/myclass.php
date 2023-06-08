@@ -102,18 +102,25 @@
                   <th>Action</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                    <div class="action">
+              <?php 
+	              if(isset($_GET['cari'])){
+		              $cari = $_GET['cari'];
+		              $data = mysqli_query($koneksi,"select * from kelas where nama like '%".$cari."%'");				
+	              }else{
+		              $data = mysqli_query($koneksi,"select * from kelas");		
+	              }
+	                $no = 1;
+	                while($d = mysqli_fetch_array($data)){
+	            ?>
+	            <tbody>
+	            <tr>
+		              <td><?php echo $d['nama']; ?></td>
+	                <td><?php echo $d['deskripsi']; ?></td>
+	                <td><?php echo $d['harga']; ?></td>
+		              <td align="center"><?php echo $d['id_kategori']; ?></td>
+                  <td><?php echo $d['waktu']; ?></td>
+	          	    <td>
+				            <div class="action">
                       <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
@@ -131,248 +138,9 @@
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI</td>
-                  <td>
-                    Bikin sebuah prototype dari sebuah web untuk mempermudah
-                    pengguna.
-                  </td>
-                  <td>Rp.200.000</td>
-                  <td>Desain</td>
-                  <td>15 Juni 2023</td>
-                  <td>
-                  <div class="action">
-                      <button onclick="location.href='sylabus.php'">
-                        <h1>S</h1>
-                        <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='tugas.php'">
-                        <h1>T</h1>
-                        <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
-                      </button>
-                      <button>
-                        <h1>H</h1>
-                        <img src="../ASET/GAMBAR/trash.png" alt="logo" />
-                      </button>
-                      <button onclick="location.href='final.php'">
-                        <h1>F</h1>
-                        <img src="../ASET/GAMBAR/check.png" alt="logo" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+		              </td>
+	            </tr>
+	            <?php } ?>
                 <tr>
                   <td>UI/UX</td>
                   <td>
