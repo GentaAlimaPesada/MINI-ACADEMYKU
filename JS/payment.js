@@ -1,3 +1,25 @@
+fetch('http://127.0.0.1:3333/auth/check', {
+  method: 'POST',
+  credentials: 'include'
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('data.message:', data.message);
+    const path = window.location.pathname;
+    const relativePath = path.substring(path.lastIndexOf('/') + 1);
+    console.log('relativePath:', relativePath);
+
+    if (data.message === 'not logged in') {
+      window.location.href = '../log_reg.html';
+    } else {
+      namaUser.textContent = data.nama;
+    }
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+
 const submitBtn = document.getElementById('submit-bayar');
 const urlParams = new URLSearchParams(window.location.search);
 const via = urlParams.get('via');
@@ -151,17 +173,7 @@ function buyCourse() {
       console.error('Error:', error.message);
     });
 }
-/* const payload = {
-  channel: "BCA",
-  items: [
-    {
-      id: "56323",
-      name: "Python Pemula Sampai Mahir",
-      price: 200000,
-      quantity: 1
-    }
-  ]
-}; */
+
 function charge(payloadItems) {
   let payloads = {
     channel: bankTerpilih,
@@ -184,7 +196,8 @@ function charge(payloadItems) {
       idOrder.textContent = data.order_id;
       console.log(data.va_numbers[0].bank);
       console.log(data.va_numbers[0].va_number);
-      vaContainer.style.display = 'flex',
+      vaContainer.style.display = 'flex';
+      listBankTrf.style.display = 'none';
 
       
     })

@@ -12,6 +12,7 @@ const currentUrl = window.location.href;
 const nav = document.querySelector(".navbar-container");
 const navHeight = document.querySelector(".navbar-height");
 const btnLogout = document.getElementById('btn-logout');
+const namaUser = document.getElementById('nama-user');
 
 var navbarHeight = nav.offsetHeight;
 
@@ -36,6 +37,8 @@ window.onload = () => {
     sideCourse.style.background = "rgb(73, 187, 189, 0.5)";
     sideCourse.style.color = "white";
   }
+
+
 
   btnLogout.addEventListener('click', () => {
     fetch('http://127.0.0.1:3333/auth/logout', {

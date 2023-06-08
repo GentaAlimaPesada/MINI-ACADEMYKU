@@ -12,7 +12,7 @@ fetch('http://127.0.0.1:3333/auth/check', {
     if (data.message === 'not logged in') {
       window.location.href = '../log_reg.html';
     } else {
-
+      namaUser.textContent = data.nama;
     }
   })
   .catch(error => {
@@ -28,7 +28,10 @@ const btnLearnNow = document.getElementById('btn-learn-now');
 
 function addCourses() {
 
-  fetch('http://mini-alb-436703962.ap-southeast-1.elb.amazonaws.com/course/course')
+  fetch('http://127.0.0.1:3333/course/notRegistered',
+    {
+      credentials: "include"
+    })
     .then(response => response.json())
     .then(courses => {
       courses.forEach(course => {

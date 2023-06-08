@@ -67,7 +67,6 @@ buttonLogin.addEventListener("click", () => {
         });
       });
   }else{
-
     if (!validateFormLogin()) {
       return;
     }
@@ -96,7 +95,11 @@ buttonLogin.addEventListener("click", () => {
           });
       
           setTimeout(() => {
-            window.location.href = 'index.html'; 
+            if(data.token.role === 'pelajar'){
+              window.location.href = 'index.html'; 
+            }else {
+              window.location.href = 'Mentor/class.html';
+            }
           }, 1000); 
           form.reset();
         } else if (data.status == 400) {

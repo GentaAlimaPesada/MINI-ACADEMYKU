@@ -12,7 +12,7 @@ fetch('http://127.0.0.1:3333/auth/check', {
     if (data.message === 'not logged in') {
       window.location.href = '../log_reg.html';
     } else {
-
+      namaUser.textContent = data.nama;
     }
   })
   .catch(error => {

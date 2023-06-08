@@ -17,6 +17,7 @@ fetch('http://127.0.0.1:3333/auth/check', {
     } else {
         profileContainer.style.display = 'flex';
         btnSignContainer.style.display = 'none';
+        namaUser.textContent =  data.nama;
     }
   })
   .catch(error => {
