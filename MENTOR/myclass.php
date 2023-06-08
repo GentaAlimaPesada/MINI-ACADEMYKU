@@ -114,11 +114,11 @@
                   <td>15 Juni 2023</td>
                   <td>
                     <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -126,7 +126,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -143,12 +143,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -156,7 +156,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -173,12 +173,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -186,7 +186,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -203,12 +203,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -216,7 +216,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -233,12 +233,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -246,7 +246,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -263,12 +263,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -276,7 +276,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -293,12 +293,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -306,7 +306,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -323,12 +323,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -336,7 +336,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -353,12 +353,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -366,7 +366,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
@@ -383,12 +383,12 @@
                   <td>Desain</td>
                   <td>15 Juni 2023</td>
                   <td>
-                    <div class="action">
-                      <button onclick="location.href='sylabus.html'">
+                  <div class="action">
+                      <button onclick="location.href='sylabus.php'">
                         <h1>S</h1>
                         <img src="../ASET/GAMBAR/new-document.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='tugas.html'">
+                      <button onclick="location.href='tugas.php'">
                         <h1>T</h1>
                         <img src="../ASET/GAMBAR/clipboard.png" alt="logo" />
                       </button>
@@ -396,7 +396,7 @@
                         <h1>H</h1>
                         <img src="../ASET/GAMBAR/trash.png" alt="logo" />
                       </button>
-                      <button onclick="location.href='final.html'">
+                      <button onclick="location.href='final.php'">
                         <h1>F</h1>
                         <img src="../ASET/GAMBAR/check.png" alt="logo" />
                       </button>
