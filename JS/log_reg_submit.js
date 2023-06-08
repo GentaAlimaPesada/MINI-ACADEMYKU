@@ -29,7 +29,7 @@ buttonLogin.addEventListener("click", () => {
       role: role
     }
 
-    fetch('http://127.0.0.1:3333/auth/register', {
+    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -67,7 +67,6 @@ buttonLogin.addEventListener("click", () => {
         });
       });
   }else{
-
     if (!validateFormLogin()) {
       return;
     }
@@ -76,7 +75,7 @@ buttonLogin.addEventListener("click", () => {
       username: username.value,
       password: password.value
     }
-    fetch('http://127.0.0.1:3333/auth/login', {
+    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/login', {
       method: 'POST',
       credentials: "include",
       headers: {
@@ -96,7 +95,11 @@ buttonLogin.addEventListener("click", () => {
           });
       
           setTimeout(() => {
-            window.location.href = 'index.html'; 
+            if(data.token.role === 'pelajar'){
+              window.location.href = 'index.html'; 
+            }else {
+              window.location.href = 'Mentor/class.html';
+            }
           }, 1000); 
           form.reset();
         } else if (data.status == 400) {

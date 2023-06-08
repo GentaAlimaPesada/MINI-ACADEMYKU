@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3333/auth/check', {
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -12,7 +12,7 @@ fetch('http://127.0.0.1:3333/auth/check', {
     if (data.message === 'not logged in') {
       window.location.href = '../log_reg.html';
     } else {
-
+      namaUser.textContent = data.nama;
     }
   })
   .catch(error => {
@@ -34,7 +34,7 @@ function deleteCart(event){
 
     const idCartItem = this.closest('.cart-item').dataset.idcart;
     
-    fetch(`http://127.0.0.1:3333/payment/cart/${idCartItem}`, {
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart/${idCartItem}`, {
         method: 'DELETE',
         credentials:"include"
       })
@@ -55,7 +55,7 @@ function deleteCart(event){
 }
 
 function addCart(){
-    fetch('http://127.0.0.1:3333/payment/cart',{
+    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart',{
       method: "GET",
       credentials:"include"
     })
