@@ -56,6 +56,7 @@ window.onload = () => {
           if(!currentUrl.includes('index.html')){
             window.location.href = '../index.html'; 
           }
+          location.reload();
         }, 1000); 
       })
       .catch(error => {

@@ -9,6 +9,8 @@ const listCourseContainer = document.getElementById('list-course-container');
 const bankChaneel = document.getElementById('bank-channel');
 const vaNumber = document.getElementById('va-number');
 const idOrder = document.getElementById('order-id');
+const vaContainer = document.querySelector('.va');
+const listBankTrf = document.querySelector('.bayar')
 
 var selectedBank = null;
 let totalHargaCourse = 0;
@@ -123,7 +125,7 @@ function checkoutCart() {
         id: item.id_kelas.toString(),
         price: item.kelas.harga,
         quantity: 1,
-        nama: item.kelas.nama
+        name: item.kelas.nama
       }));
       charge(payloadItems);
     })
@@ -136,12 +138,12 @@ function buyCourse() {
   fetch(`http://127.0.0.1:3333/course/${idKelas}`)
     .then(response => response.json())
     .then(course => {
-      const payloadItems = {
+      const payloadItems = [{
         id: course.id_kelas.toString(),
         price: course.harga,
         quantity: 1,
-        nama: course.nama
-      }
+        name: course.nama
+      }]
       charge(payloadItems);
 
     })
@@ -149,11 +151,21 @@ function buyCourse() {
       console.error('Error:', error.message);
     });
 }
-
+/* const payload = {
+  channel: "BCA",
+  items: [
+    {
+      id: "56323",
+      name: "Python Pemula Sampai Mahir",
+      price: 200000,
+      quantity: 1
+    }
+  ]
+}; */
 function charge(payloadItems) {
   let payloads = {
     channel: bankTerpilih,
-    items: [payloadItems]
+    items: payloadItems
   }
   console.log(JSON.stringify(payloads));
   fetch('http://127.0.0.1:3333/payment/charge', {
@@ -167,12 +179,17 @@ function charge(payloadItems) {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      bankChaneel = data.bank_transfer.bank;
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Ceritanya udah kebayar';
+      bankChaneel.textContent = data.va_numbers[0].bank;
+      vaNumber.textContent = data.va_numbers[0].va_number;
+      idOrder.textContent = data.order_id;
+      console.log(data.va_numbers[0].bank);
+      console.log(data.va_numbers[0].va_number);
+      vaContainer.style.display = 'flex',
+
+      
     })
     .catch(error => {
-      console.log(error);
+      console.log(error.message);
       submitBtn.disabled = false;
       submitBtn.innerHTML = 'Gagal Bayar';
     });
