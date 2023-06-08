@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3333/auth/check', {
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const buyContainer = document.querySelector('.buy')
 
 
-  fetch(`http://127.0.0.1:3333/course/${idKelas}/paid`, {
+  fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${idKelas}/paid`, {
     method: 'GET',
     credentials: 'include'
   })
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   function addAbout() {
-    fetch(`http://127.0.0.1:3333/course/${idKelas}`)
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${idKelas}`)
       .then(response => response.json())
       .then(course => {
         judulKelas.textContent = course.nama;
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addAbout();
 
   function addSilabus() {
-    fetch(`http://127.0.0.1:3333/course/${idKelas}/silabus`)
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${idKelas}/silabus`)
       .then(response => response.json())
       .then(silabuses => {
 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addSilabus();
 
   function addSubmission() {
-    fetch(`http://127.0.0.1:3333/course/${idKelas}/tugas`)
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${idKelas}/tugas`)
       .then(response => response.json())
       .then(submissions => {
         submissions.forEach(submission => {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             const file = input.files[0];
             console.log(file);
-            const url = `http://127.0.0.1:3333/course/${submission.id_tugas}/upload`;
+            const url = `http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${submission.id_tugas}/upload`;
 
             const formData = new FormData();
             formData.append('file', file);
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
           });
 
-          /* fetch(`http://127.0.0.1:3333/course/${submission.id_tugas}/cekUpload`, {
+          /* fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${submission.id_tugas}/cekUpload`, {
               method: 'GET',
               credentials: "include"
             })
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addSubmission();
 
   function tambahCart() {
-    fetch(`http://127.0.0.1:3333/payment/cart/${idKelas}`, {
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart/${idKelas}`, {
       method: 'POST',
       credentials: "include"
     })

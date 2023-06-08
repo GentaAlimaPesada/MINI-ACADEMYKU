@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3333/auth/check', {
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -42,7 +42,7 @@ submitBtn.disabled = true;
 
 function addSummary() {
   if (via === 'cart') {
-    fetch('http://127.0.0.1:3333/payment/cart',{
+    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart',{
       credentials: "include"
     })
       .then(response => response.json())
@@ -63,7 +63,7 @@ function addSummary() {
         console.log(error);
       });
   } else if (via === 'buy') {
-    fetch(`http://127.0.0.1:3333/course/${idKelas}`)
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${idKelas}`)
       .then(response => response.json())
       .then(course => {
         const sumCourseItem = summaryTemplate.content.cloneNode(true);
@@ -136,7 +136,7 @@ function makePayment() {
 
 function checkoutCart() {
   let cartData;
-  fetch('http://127.0.0.1:3333/payment/cart',{
+  fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart',{
     credentials: "include"
   })
     .then(response => response.json())
@@ -157,7 +157,7 @@ function checkoutCart() {
 }
 
 function buyCourse() {
-  fetch(`http://127.0.0.1:3333/course/${idKelas}`)
+  fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/${idKelas}`)
     .then(response => response.json())
     .then(course => {
       const payloadItems = [{
@@ -180,7 +180,7 @@ function charge(payloadItems) {
     items: payloadItems
   }
   console.log(JSON.stringify(payloads));
-  fetch('http://127.0.0.1:3333/payment/charge', {
+  fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/charge', {
     method: 'POST',
     headers:{
       'Content-Type': 'application/json'

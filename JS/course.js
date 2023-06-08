@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3333/auth/check', {
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -28,7 +28,7 @@ const btnLearnNow = document.getElementById('btn-learn-now');
 
 function addCourses() {
 
-  fetch('http://127.0.0.1:3333/course/notRegistered',
+  fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/notRegistered',
     {
       credentials: "include"
     })
@@ -73,7 +73,7 @@ addCourses();
 
 const contentBox = document.querySelector('.content');
 function addRandCourse() {
-  fetch('http://127.0.0.1:3333/course/rand')
+  fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/rand')
     .then(response => response.json())
     .then(course => {
       contentBox.setAttribute('data-idkelas', course.id_kelas);

@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:3333/auth/check', {
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const listCourse = document.querySelector('.list-myCourse-container');
 
   const urls = {
-    myCourse: 'http://127.0.0.1:3333/course/myCourse',
-    notRegistered: 'http://127.0.0.1:3333/course/notRegistered',
-    waitingPayment: 'http://127.0.0.1:3333/course/waitingPayment'
+    myCourse: 'http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/myCourse',
+    notRegistered: 'http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/notRegistered',
+    waitingPayment: 'http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/waitingPayment'
   }
   function addCourses(container) {
     const url = urls[container.id]

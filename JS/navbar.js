@@ -41,7 +41,7 @@ window.onload = () => {
 
 
   btnLogout.addEventListener('click', () => {
-    fetch('http://127.0.0.1:3333/auth/logout', {
+    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/logout', {
       method: 'POST',
       credentials: 'include'
     })

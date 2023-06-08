@@ -1,7 +1,7 @@
 const profileContainer = document.querySelector('.profile-container');
 const btnSignContainer = document.querySelector('.button-sign-container');
 
-fetch('http://127.0.0.1:3333/auth/check', {
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
