@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -74,8 +74,8 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
