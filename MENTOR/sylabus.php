@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../CSS/header_footer.css" />
-    <link rel="stylesheet" type="text/css" href="../CSS/class.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/sylabus.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -76,8 +76,8 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
@@ -88,23 +88,28 @@
     <div class="content">
       <div class="table">
         <section class="table_header">
-          <div class="judul"><h1>Tambah Class</h1></div>
+          <div class="judul"><h1>Tambah Data Sylabus</h1></div>
+          <div class="cari">
+            <button onclick="location.href='myclass.php'">
+              <img src="../ASET/GAMBAR/close1.png" alt="logo" />
+            </button>
+          </div>
         </section>
         <section class="table_body">
-          <form action="tambah_kelas.php" method="post">
+          <form action="../PHP/sylabus.php" method="post">
             <table>
               <tr>
                 <td colspan="2">
-                  <label for="nama">Nama Kelas</label>
+                  <label for="title">Title</label>
                 </td>
               </tr>
               <tr>
                 <td colspan="2">
                   <input
                     type="text"
-                    placeholder="Masukan Nama Kelas"
-                    id="nama"
+                    id="title"
                     required
+                    placeholder="Isikan Judul Sylabus"
                   />
                 </td>
               </tr>
@@ -117,76 +122,22 @@
                 <td colspan="2">
                   <input
                     type="text"
-                    placeholder="Deskripsi Kelas"
                     id="deskripsi"
                     required
+                    placeholder="Isikan Deskripsi Sylabus"
                   />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <label for="harga">Harga</label>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input
-                    type="text"
-                    placeholder="Masukan Harga Kelas"
-                    id="harga"
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <label for="id_kategori">Kategori</label>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <select name="id_kategori">
-                    <?php
-                        $query = mysqli_query($koneksi, "select * from level");
-                        while ($data = mysqli_fetch_array($query)) {
-                        ?>
-                    <option value="<?php echo $data['id_level'];?>">
-                      <?php echo $data['level'];?>
-                    </option>
-                    <?php } ?>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <label for="waktu">Waktu Pelaksanaan</label>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input type="date" id="waktu" required />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <label for="gambar">Gambar Header Kelas</label>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input type="file" id="gambar" required />
                 </td>
               </tr>
             </table>
-            <table>
+            <table align="center">
               <tr>
                 <td>
-                  <div class="button">
+                  <div class="submit">
                     <input type="reset" value="Reset" />
                   </div>
                 </td>
                 <td>
-                  <div class="button">
+                  <div class="submit">
                     <input type="submit" value="Tambah" name="tambah" />
                   </div>
                 </td>

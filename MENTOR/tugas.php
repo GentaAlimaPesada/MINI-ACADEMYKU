@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -79,8 +79,8 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
@@ -93,7 +93,7 @@
         <section class="table_header">
           <div class="judul"><h1>Management Tugas</h1></div>
           <div class="cari">
-            <button onclick="location.href='myclass.html'">
+            <button onclick="location.href='myclass.php'">
               <img src="../ASET/GAMBAR/close1.png" alt="logo" />
             </button>
           </div>
@@ -112,18 +112,18 @@
           </div>
           <div class="detail">
             <div class="tambah_tugas active">
-              <form action="#" method="post">
+              <form action="../PHP/tambahtugas.php" method="post">
                 <table>
                   <tr>
                     <td colspan="2">
-                      <label for="title">Title</label>
+                      <label for="judul">Judul</label>
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
                       <input
                         type="text"
-                        id="title"
+                        id="judul"
                         required
                         placeholder="Isikan Judul Tugas"
                       />

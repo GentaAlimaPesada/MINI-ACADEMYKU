@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -76,8 +76,8 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
@@ -90,38 +90,40 @@
         <section class="table_header">
           <div class="judul"><h1>Detail Tugas</h1></div>
           <div class="cari">
-            <button onclick="location.href='tugas.html'">
+            <button onclick="location.href='tugas.php'">
               <img src="../ASET/GAMBAR/close1.png" alt="logo" />
             </button>
           </div>
         </section>
         <section class="table_body">
-          <table class="list_tugas">
-            <tbody>
-              <tr class="td_button">
-                <td>Tugas Pertemuan 1_Genta Alima Persada.pdf</td>
-                <td>
-                  <div class="action">
-                    <input placeholder="Beri Nilai Disini" />
-                    <button onclick="location.href='detail_tugas.html'">
-                      Nilai
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="td_button">
-                <td>Tugas Pertemuan 2_Genta Alima Persada.pdf</td>
-                <td>
-                  <div class="action">
-                    <input placeholder="Beri Nilai Disini" />
-                    <button onclick="location.href='detail_tugas.html'">
-                      Nilai
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <form action="../PHP/berinilai.php">
+            <table class="list_tugas">
+              <tbody>
+                <tr class="td_button">
+                  <td>Tugas Pertemuan 1_Genta Alima Persada.pdf</td>
+                  <td>
+                    <div class="action">
+                      <input placeholder="Beri Nilai Disini" />
+                      <button onclick="location.href='detail_tugas.html'">
+                        Nilai
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="td_button">
+                  <td>Tugas Pertemuan 2_Genta Alima Persada.pdf</td>
+                  <td>
+                    <div class="action">
+                      <input placeholder="Beri Nilai Disini" />
+                      <button onclick="location.href='detail_tugas.html'">
+                        Nilai
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
         </section>
       </div>
     </div>
