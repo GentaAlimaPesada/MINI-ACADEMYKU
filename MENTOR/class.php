@@ -229,7 +229,7 @@
       </center>
     </footer>
     <script src="../JS/navbar.js"></script>
-    <script src="JS/idx.js"></script>
+    <script src="../JS/idx.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>
