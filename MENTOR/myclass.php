@@ -102,6 +102,7 @@
                   <th>Action</th>
                 </tr>
               </thead>
+              <tbody>
               <?php 
 	              if(isset($_GET['cari'])){
 		              $cari = $_GET['cari'];
@@ -112,7 +113,6 @@
 	                $no = 1;
 	                while($d = mysqli_fetch_array($data)){
 	            ?>
-	            <tbody>
 	            <tr>
 		              <td><?php echo $d['nama']; ?></td>
 	                <td><?php echo $d['deskripsi']; ?></td>

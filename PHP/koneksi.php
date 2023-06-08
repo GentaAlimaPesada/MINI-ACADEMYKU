@@ -1,6 +1,5 @@
 <?php 
-$koneksi = mysqli_connect("http://minac.c5he2f1isuqn.ap-southeast-1.rds.amazonaws.com","admin
-","miniacademy7!","Mini_Academy");
+$koneksi = mysqli_connect("localhost","root","","db_miniacademy");
  
 // Check connection
 if (mysqli_connect_errno()){
