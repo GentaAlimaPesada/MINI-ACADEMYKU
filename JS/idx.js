@@ -1,7 +1,7 @@
 const profileContainer = document.querySelector('.profile-container');
 const btnSignContainer = document.querySelector('.button-sign-container');
 
-fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
+fetch('https://minacademy.me/auth/check', {
   method: 'POST',
   credentials: 'include'
 })

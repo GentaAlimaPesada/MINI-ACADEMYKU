@@ -29,7 +29,7 @@ buttonLogin.addEventListener("click", () => {
       role: role
     }
 
-    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/register', {
+    fetch('https://minacademy.me/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ buttonLogin.addEventListener("click", () => {
           text: 'Terjadi kesalahan saat melakukan registrasi'
         });
       });
-  }else{
+  } else {
     if (!validateFormLogin()) {
       return;
     }
@@ -75,7 +75,7 @@ buttonLogin.addEventListener("click", () => {
       username: username.value,
       password: password.value
     }
-    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/login', {
+    fetch('https://minacademy.me/auth/login', {
       method: 'POST',
       credentials: "include",
       headers: {
@@ -90,17 +90,17 @@ buttonLogin.addEventListener("click", () => {
             icon: 'success',
             title: 'Login Berhasil',
             text: data.message,
-            timer: 1000, 
-            showConfirmButton: false 
+            timer: 1000,
+            showConfirmButton: false
           });
-      
+
           setTimeout(() => {
-            if(data.token.role === 'pelajar'){
-              window.location.href = 'index.html'; 
-            }else {
-              window.location.href = 'Mentor/class.html';
+            if (data.token.role === 'pelajar') {
+              window.location.href = 'index.html';
+            } else {
+              window.location.href = 'MENTOR/class.php';
             }
-          }, 1000); 
+          }, 1000);
           form.reset();
         } else if (data.status == 400) {
           Swal.fire({
@@ -126,7 +126,7 @@ buttonLogin.addEventListener("click", () => {
   }
 });
 
-function validateFormLogin(){
+function validateFormLogin() {
   let isValid = true;
   if (username.value.trim() === '') {
     Swal.fire({
@@ -134,7 +134,7 @@ function validateFormLogin(){
       title: 'Kolom Username harus diisi',
     });
     isValid = false;
-  }else if (password.value.trim() === '') {
+  } else if (password.value.trim() === '') {
     Swal.fire({
       icon: 'warning',
       title: 'Kolom Password harus diisi',
@@ -153,7 +153,7 @@ function validateForm() {
       title: 'Kolom Nama harus diisi',
     });
     isValid = false;
-  }else if (email.value.trim() === '') {
+  } else if (email.value.trim() === '') {
     Swal.fire({
       icon: 'warning',
       title: 'Kolom Email harus diisi',
@@ -165,19 +165,19 @@ function validateForm() {
       title: 'Email tidak valid',
     });
     isValid = false;
-  }else if (username.value.trim() === '') {
+  } else if (username.value.trim() === '') {
     Swal.fire({
       icon: 'warning',
       title: 'Kolom Username harus diisi',
     });
     isValid = false;
-  }else if (password.value.trim() === '') {
+  } else if (password.value.trim() === '') {
     Swal.fire({
       icon: 'warning',
       title: 'Kolom Password harus diisi',
     });
     isValid = false;
-  }else if (conpas.value.trim() === '') {
+  } else if (conpas.value.trim() === '') {
     Swal.fire({
       icon: 'warning',
       title: 'Kolom Konfirmasi Password harus diisi',

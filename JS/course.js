@@ -1,4 +1,4 @@
-fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
+fetch('https://minacademy.me/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -28,7 +28,7 @@ const btnLearnNow = document.getElementById('btn-learn-now');
 
 function addCourses() {
 
-  fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/notRegistered',
+  fetch('https://minacademy.me/course/notRegistered',
     {
       credentials: "include"
     })
@@ -40,6 +40,7 @@ function addCourses() {
 
         courseCard.querySelector('#kategori').textContent = course.id_kategori;
         courseCard.querySelector('#waktu').textContent = course.waktu;
+        courseCard.querySelector('#kuota').textContent = `${course.sisa_kuota}/${course.kuota}`
         courseCard.querySelector('#nama-kelas').textContent = course.nama;
 
         if (course.deskripsi.length > 100) {
@@ -73,7 +74,7 @@ addCourses();
 
 const contentBox = document.querySelector('.content');
 function addRandCourse() {
-  fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/rand')
+  fetch('https://minacademy.me/course/rand')
     .then(response => response.json())
     .then(course => {
       contentBox.setAttribute('data-idkelas', course.id_kelas);
