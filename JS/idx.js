@@ -1,6 +1,10 @@
 const profileContainer = document.querySelector('.profile-container');
 const btnSignContainer = document.querySelector('.button-sign-container');
 
+var cookies = document.cookie;
+
+console.log('cookie: ' + cookies);
+
 fetch('https://miniacademy.me/auth/check', {
   method: 'POST',
   credentials: 'include'
