@@ -1,4 +1,4 @@
-fetch('https://minacademy.me/auth/check', {
+fetch('https://miniacademy.me/auth/check', {
   method: 'POST',
   credentials: 'include'
 })
@@ -28,7 +28,7 @@ const btnLearnNow = document.getElementById('btn-learn-now');
 
 function addCourses() {
 
-  fetch('https://minacademy.me/course/notRegistered',
+  fetch('https://miniacademy.me/course/notRegistered',
     {
       credentials: "include"
     })
@@ -74,7 +74,7 @@ addCourses();
 
 const contentBox = document.querySelector('.content');
 function addRandCourse() {
-  fetch('https://minacademy.me/course/rand')
+  fetch('https://miniacademy.me/course/rand')
     .then(response => response.json())
     .then(course => {
       contentBox.setAttribute('data-idkelas', course.id_kelas);

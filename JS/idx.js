@@ -1,7 +1,7 @@
 const profileContainer = document.querySelector('.profile-container');
 const btnSignContainer = document.querySelector('.button-sign-container');
 
-fetch('https://minacademy.me/auth/check', {
+fetch('https://miniacademy.me/auth/check', {
   method: 'POST',
   credentials: 'include'
 })

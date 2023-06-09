@@ -29,7 +29,7 @@ buttonLogin.addEventListener("click", () => {
       role: role
     }
 
-    fetch('https://minacademy.me/auth/register', {
+    fetch('https://miniacademy.me/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ buttonLogin.addEventListener("click", () => {
       username: username.value,
       password: password.value
     }
-    fetch('https://minacademy.me/auth/login', {
+    fetch('https://miniacademy.me/auth/login', {
       method: 'POST',
       credentials: "include",
       headers: {
