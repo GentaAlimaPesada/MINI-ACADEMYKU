@@ -1,3 +1,24 @@
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
+  method: 'POST',
+  credentials: 'include'
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('data.message:', data.message);
+    const path = window.location.pathname;
+    const relativePath = path.substring(path.lastIndexOf('/') + 1);
+    console.log('relativePath:', relativePath);
+
+    if (data.message === 'not logged in') {
+      window.location.href = '../log_reg.html';
+    } else {
+      namaUser.textContent = data.nama;
+    }
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
   const courseTemplate = document.getElementById('course-template');
 
@@ -9,14 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const listCourse = document.querySelector('.list-myCourse-container');
 
   const urls = {
-    myCourse: 'http://127.0.0.1:3333/course/myCourse',
-    notRegistered: 'http://127.0.0.1:3333/course/notRegistered',
-    waitingPayment: 'http://127.0.0.1:3333/course/waitingPayment'
+    myCourse: 'http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/myCourse',
+    notRegistered: 'http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/notRegistered',
+    waitingPayment: 'http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/course/waitingPayment'
   }
   function addCourses(container) {
     const url = urls[container.id]
     console.log(`${container.id} : ${urls[container.id]}`)
-    fetch(url)
+    fetch(url, {
+      credentials:"include"
+    })
       .then(response => response.json())
       .then(courses => {
         if (courses.length === 0 && container.id === 'myCourse') {

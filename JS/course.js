@@ -1,3 +1,24 @@
+fetch('https://miniacademy.me/auth/check', {
+  method: 'POST',
+  credentials: 'include'
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('data.message:', data.message);
+    const path = window.location.pathname;
+    const relativePath = path.substring(path.lastIndexOf('/') + 1);
+    console.log('relativePath:', relativePath);
+
+    if (data.message === 'not logged in') {
+      window.location.href = '../log_reg.html';
+    } else {
+      namaUser.textContent = data.nama;
+    }
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 const courseTemplate = document.getElementById('course-template');
 const listCourse = document.querySelector('.list-course');
 const namaPengajar = document.getElementById('box-nama-pengajar');
@@ -7,7 +28,10 @@ const btnLearnNow = document.getElementById('btn-learn-now');
 
 function addCourses() {
 
-  fetch('http://mini-alb-436703962.ap-southeast-1.elb.amazonaws.com/course/notRegistered')
+  fetch('https://miniacademy.me/course/notRegistered',
+    {
+      credentials: "include"
+    })
     .then(response => response.json())
     .then(courses => {
       courses.forEach(course => {
@@ -16,6 +40,7 @@ function addCourses() {
 
         courseCard.querySelector('#kategori').textContent = course.id_kategori;
         courseCard.querySelector('#waktu').textContent = course.waktu;
+        courseCard.querySelector('#kuota').textContent = `${course.sisa_kuota}/${course.kuota}`
         courseCard.querySelector('#nama-kelas').textContent = course.nama;
 
         if (course.deskripsi.length > 100) {
@@ -49,7 +74,7 @@ addCourses();
 
 const contentBox = document.querySelector('.content');
 function addRandCourse() {
-  fetch('http://127.0.0.1:3333/course/rand')
+  fetch('https://miniacademy.me/course/rand')
     .then(response => response.json())
     .then(course => {
       contentBox.setAttribute('data-idkelas', course.id_kelas);

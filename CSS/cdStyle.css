@@ -200,7 +200,7 @@ body {
 }
 
 .submission-menu {
-  display: block;
+  display: none;
 }
 
 .about-container.active,

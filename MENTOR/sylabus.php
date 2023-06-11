@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -51,9 +51,6 @@
             onclick="event.preventDefault()"
             class="profile-container"
           >
-            <div class="profile-picture">
-              <img src="../ASET/GAMBAR/profilePict.svg" alt="" />
-            </div>
             <div class="profile">
               <p>Jennie</p>
               <img id="arrow-profile" src="../ASET/GAMBAR/arrow.svg" alt="" />
@@ -79,8 +76,8 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
@@ -93,13 +90,13 @@
         <section class="table_header">
           <div class="judul"><h1>Tambah Data Sylabus</h1></div>
           <div class="cari">
-            <button onclick="location.href='myclass.html'">
+            <button onclick="location.href='myclass.php'">
               <img src="../ASET/GAMBAR/close1.png" alt="logo" />
             </button>
           </div>
         </section>
         <section class="table_body">
-          <form action="#" method="post">
+          <form action="../PHP/sylabus.php" method="post">
             <table>
               <tr>
                 <td colspan="2">
@@ -164,5 +161,7 @@
       </center>
     </footer>
     <script src="../JS/navbar.js"></script>
+    <script src="../JS/idx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>

@@ -1,3 +1,24 @@
+fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/auth/check', {
+  method: 'POST',
+  credentials: 'include'
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('data.message:', data.message);
+    const path = window.location.pathname;
+    const relativePath = path.substring(path.lastIndexOf('/') + 1);
+    console.log('relativePath:', relativePath);
+
+    if (data.message === 'not logged in') {
+      window.location.href = '../log_reg.html';
+    } else {
+      namaUser.textContent = data.nama;
+    }
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 const totalHarga = document.getElementById('total-harga');
 //const namaKelas = document.getElementById('course-title');
 //const namaPengajar = document.getElementById('instructor-name');
@@ -6,14 +27,16 @@ const gambarKelas = document.getElementById('gambar-kelas');
 const hapusCartItem = document.getElementById('delete-course');
 const cartTemplate = document.getElementById('cart-item-template');
 const courseCartContainer = document.querySelector('.course-container')
+const btnCo = document.querySelector('.btn-co');
 
 function deleteCart(event){
     event.preventDefault();
 
     const idCartItem = this.closest('.cart-item').dataset.idcart;
     
-    fetch(`http://127.0.0.1:3333/payment/cart/${idCartItem}`, {
+    fetch(`http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart/${idCartItem}`, {
         method: 'DELETE',
+        credentials:"include"
       })
         .then(response => {
           if (response.ok) {
@@ -32,7 +55,10 @@ function deleteCart(event){
 }
 
 function addCart(){
-    fetch('http://127.0.0.1:3333/payment/cart')
+    fetch('http://MINI-ALB-436703962.ap-southeast-1.elb.amazonaws.com/payment/cart',{
+      method: "GET",
+      credentials:"include"
+    })
     .then(response => response.json())
     .then(cartItems => {
         let total = 0;
@@ -58,3 +84,7 @@ function addCart(){
     });
 }
 addCart();
+
+btnCo.addEventListener('click', () => {
+  window.location.href = '../Pelajar/payment.html?via=cart'
+});

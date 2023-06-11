@@ -22,7 +22,7 @@
       <div class="menu-profile-container">
         <div class="profile-menu">
           <a href="MyCourse.html">My Course</a>
-          <a href="../index.html">Logout</a>
+          <a id="btn-logout">Logout</a>
         </div>
         <div class="menu-container">
           <ul class="nav__link">
@@ -34,11 +34,8 @@
           <a href="cart.html"><img id="cart-img" src="../ASET/GAMBAR/Cart/cart.svg" alt="" /></a>
         </div>
         <a href="#" onclick="event.preventDefault()" class="profile-container">
-          <div class="profile-picture">
-            <img src="../ASET/GAMBAR/profilePict.svg" alt="" />
-          </div>
           <div class="profile">
-            <p>Lina</p>
+            <p id="nama-user">Lina</p>
             <img id="arrow-profile" src="../ASET/GAMBAR/arrow.svg" alt="" />
           </div>
         </a>
@@ -126,14 +123,16 @@
                       Sejarah dan perkembangan AWS, Konsep dasar cloud
                       computing, Model layanan cloud
                     </p>
-                    <form action="#" method="post" class="upload_tugas">
+
+                    <a href=""></a>
+                    <form method="post" class="upload_tugas">
                       <table>
                         <tr>
                           <td colspan="2">
                             <input type="file" id="gambar" required />
                           </td>
                           <td>
-                            <input class="submit" type="submit" value="Upload" />
+                            <input id="button-submit-tugas" class="submit" type="submit" value="Upload" />
                           </td>
                         </tr>
                       </table>
@@ -156,16 +155,6 @@
           <button class="button-cart">Add to Cart</button>
         </div>
         <hr />
-        <div class="share">
-          <p class="sub">Share this bootcamp</p>
-          <div class="media">
-            <a href="#share-twitter"><img src="../ASET/GAMBAR/twitter.svg" alt="" /></a>
-            <a href="#share-facebook"><img src="../ASET/GAMBAR/facebook.svg" alt="" /></a>
-            <a href="#share-instagram"><img src="../ASET/GAMBAR/instagram.svg" alt="" /></a>
-            <a href="#share-telegram"><img src="../ASET/GAMBAR/telegram.svg" alt="" /></a>
-            <a href="#share-whatsapp"><img src="../ASET/GAMBAR/whatsapp.svg" alt="" /></a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -187,6 +176,7 @@
   <script src="../JS/course_detail.js"></script>
   <script src="../JS/navbar.js"></script>
   <script src="../js/accordion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../CSS/header_footer.css" />
-    <link rel="stylesheet" type="text/css" href="../CSS/final.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/tugas.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -79,137 +79,216 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
       </div>
       <div class="konten"></div>
       <div class="navbar-height"></div>
-
-      <div class="content">
-          <div class="table">
-            <section class="table_header">
-              <div class="judul"><h1>Nilai Akhir & Selesaikan Kelas</h1></div>
-              <div class="cari">
-                <button onclick="location.href='myclass.html'">
-                  <img src="../ASET/GAMBAR/close1.png" alt="logo" />
-                </button>
-              </div>
-            </section>
-            <section class="table_body">
+    </div>
+    <div class="content">
+      <div class="table">
+        <section class="table_header">
+          <div class="judul"><h1>Management Tugas</h1></div>
+          <div class="cari">
+            <button onclick="location.href='myclass.php'">
+              <img src="../ASET/GAMBAR/close1.png" alt="logo" />
+            </button>
+          </div>
+        </section>
+        <section class="table_body">
+          <div class="menu">
+            <div
+              class="menu-item information-menu active"
+              onclick="showContainer(0)"
+            >
+              Tambah Tugas
+            </div>
+            <div class="menu-item silabus-menu" onclick="showContainer(1)">
+              Daftar Tugas
+            </div>
+          </div>
+          <div class="detail">
+            <div class="tambah_tugas active">
+              <form action="../PHP/tambahtugas.php" method="post">
+                <table>
+                  <tr>
+                    <td colspan="2">
+                      <label for="judul">Judul</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input
+                        type="text"
+                        id="judul"
+                        required
+                        placeholder="Isikan Judul Tugas"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <label for="deskripsi">Deskripsi</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input
+                        type="text"
+                        id="deskripsi"
+                        required
+                        placeholder="Isikan Deskripsi Tugas"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <label for="deadline">Deadline</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input type="date" id="deadline" required />
+                    </td>
+                  </tr>
+                </table>
+                <table align="center">
+                  <tr>
+                    <td>
+                      <div class="submit">
+                        <input type="reset" value="Reset" />
+                      </div>
+                    </td>
+                    <td>
+                      <div class="submit">
+                        <input type="submit" value="Tambah" name="tambah" />
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+            <div class="daftar_tugas">
               <table class="list_tugas">
                 <tbody>
                   <tr class="td_button">
-                    <td>Genta Alima Persada</td>
+                    <td>Tugas Pertemuan 1</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>Fahriza A. Harits</td>
+                    <td>Tugas Pertemuan 2</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>Evander Tokang</td>
+                    <td>Tugas Pertemuan 3</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>M. Thoriq Abiya</td>
+                    <td>Tugas Pertemuan 4</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>M. Fathan Octafirst</td>
+                    <td>Tugas Pertemuan 5</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>M. Fathan Octafirst</td>
+                    <td>Tugas Pertemuan 6</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>M. Fathan Octafirst</td>
+                    <td>Tugas Pertemuan 7</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr class="td_button">
-                    <td>M. Fathan Octafirst</td>
+                    <td>Tugas Pertemuan 8</td>
                     <td>
                       <div class="action">
-                        <input placeholder="Beri Nilai Disini" />
                         <button onclick="location.href='detail_tugas.html'">
-                          Nilai
+                          Detail
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="td_button">
+                    <td>Tugas Pertemuan 9</td>
+                    <td>
+                      <div class="action">
+                        <button onclick="location.href='detail_tugas.html'">
+                          Detail
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="td_button">
+                    <td>Tugas Pertemuan 10</td>
+                    <td>
+                      <div class="action">
+                        <button onclick="location.href='detail_tugas.html'">
+                          Detail
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="td_button">
+                    <td>Tugas Pertemuan 11</td>
+                    <td>
+                      <div class="action">
+                        <button onclick="location.href='detail_tugas.html'">
+                          Detail
                         </button>
                       </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
-            </section>
+            </div>
           </div>
-          <div class="table_button">
-            <table align="center">
-              <tr>
-                <td>
-                  <div class="submit">
-                    <input type="reset" value="Reset" />
-                  </div>
-                </td>
-                <td>
-                  <div class="submit">
-                    <input type="submit" value="Selesaikan"/>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </form>
+        </section>
       </div>
     </div>
     <footer class="footer section">
@@ -226,5 +305,8 @@
       </center>
     </footer>
     <script src="../JS/navbar.js"></script>
+    <script src="../JS/course_detail.js"></script>
+    <script src="../JS/idx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>

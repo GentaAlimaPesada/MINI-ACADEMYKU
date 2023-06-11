@@ -25,7 +25,7 @@
         <div class="menu-profile-container">
           <div class="profile-menu">
             <a href="MyCourse.html">My Course</a>
-            <a href="../index.html">Logout</a>
+            <a id="btn-logout">Logout</a>
           </div>
           <div class="menu-container">
             <ul class="nav__link">
@@ -34,18 +34,17 @@
             </ul>
           </div>
           <div class="cart-menu">
-            <a href="cart.html"><img id="cart-img" src="../ASET/GAMBAR/Cart/cart.svg" alt=""></a>
-        </div>
+            <a href="cart.html"
+              ><img id="cart-img" src="../ASET/GAMBAR/Cart/cart.svg" alt=""
+            /></a>
+          </div>
           <a
             href="#"
             onclick="event.preventDefault()"
             class="profile-container"
           >
-            <div class="profile-picture">
-              <img src="../ASET/GAMBAR/profilePict.svg" alt="" />
-            </div>
             <div class="profile">
-              <p>Lina</p>
+              <p id="nama-user">Lina</p>
               <img id="arrow-profile" src="../ASET/GAMBAR/arrow.svg" alt="" />
             </div>
           </a>
@@ -120,7 +119,7 @@
               <tr>
                 <td><p class="pay">Bank</p></td>
                 <td><p class="pay">:</p></td>
-                <td><p class="pay" id="va-number">BCA</p></td>
+                <td><p class="pay" id="bank-channel">BCA</p></td>
               </tr>
               <tr>
                 <td><p class="pay">VA Number</p></td>
@@ -133,21 +132,41 @@
                 <td><p class="pay" id="order-id">1231231331</p></td>
               </tr>
             </table>
-            <h2 id="simulasi-bayar">Lakukan Simulasi Pembayaran</h2>
+            <a href="https://simulator.sandbox.midtrans.com/permata/va/index"
+              ><h2 id="simulasi-bayar">Lakukan Simulasi Pembayaran</h2></a
+            >
+            <div class="tataCara">
+              <p class="atas">Tata Cara Melakukan Pembayaran :</p>
+              <p class="bawah">
+                1. Klik Link Pada Tulisan "Simulasi Pembayaran". <br />
+                2. Saat Pada WEB Midtrans Pilih Pembayaran VA Sesuai Bank Yang
+                Dipilih.<br />
+                3. Masukan Nomor VA Yang Sudah Disalin Tadi Dalam Kolom Yang
+                Tersedia.<br />
+                4. Selesaikan Pembayaran.<br />
+                5. Proses Selesai.
+              </p>
+            </div>
           </div>
         </div>
         <div class="summary">
           <p class="sum">Summary</p>
-          <div class="list-course">
-            <div class="courses">
-              <div class="courses-banner">
-                <img id="gambar-course" src="../ASET/GAMBAR/buy_banner.svg" alt="" />
+          <div class="list-course" id="list-course-container">
+            <template id="summary-template">
+              <div class="courses">
+                <div class="courses-banner">
+                  <img
+                    id="gambar-course"
+                    src="../ASET/GAMBAR/buy_banner.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="course-info">
+                  <p id="nama-kelas">AWS Certified solutions Architect</p>
+                  <h3 id="harga-kelas">Rp. 500.000</h3>
+                </div>
               </div>
-              <div class="course-info">
-                <p id="judul-kelas">AWS Certified solutions Architect</p>
-                <h3 id="harga-kelas">Rp. 500.000</h3>
-              </div>
-            </div>
+            </template>
           </div>
           <div class="count-amount">
             <div class="sum-payment">
@@ -180,5 +199,6 @@
     <script src="../JS/navbar.js"></script>
     <script src="../JS/payment.js"></script>
     <script src="../JS/accordion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>

@@ -42,8 +42,8 @@
           </div>
           <div class="menu-container">
             <ul class="nav__link">
-              <li><a href="class.html">Class</a></li>
-              <li><a href="myclass.html">MyClass</a></li>
+              <li><a href="class.php">Class</a></li>
+              <li><a href="myclass.php">MyClass</a></li>
             </ul>
           </div>
           <a
@@ -51,9 +51,6 @@
             onclick="event.preventDefault()"
             class="profile-container"
           >
-            <div class="profile-picture">
-              <img src="../ASET/GAMBAR/profilePict.svg" alt="" />
-            </div>
             <div class="profile">
               <p>Jennie</p>
               <img id="arrow-profile" src="../ASET/GAMBAR/arrow.svg" alt="" />
@@ -79,8 +76,8 @@
             <img src="../ASET/GAMBAR/minilogo.png" alt="logo" />
           </div>
           <div class="menu-sidebar">
-            <a href="class.html" id="side-course">Class</a>
-            <a href="myclass.html" id="side-mycourse">My Class</a>
+            <a href="class.php" id="side-course">Class</a>
+            <a href="myclass.php" id="side-mycourse">My Class</a>
             <a href="../index.html" id="side-home">Logout</a>
           </div>
         </div>
@@ -94,7 +91,7 @@
           <div class="judul"><h1>Tambah Class</h1></div>
         </section>
         <section class="table_body">
-          <form action="#" method="post">
+          <form action="../PHP/tambahkelas.php" method="post">
             <table>
               <tr>
                 <td colspan="2">
@@ -150,11 +147,11 @@
                 <td colspan="2">
                   <select name="id_kategori">
                     <?php
-                        $query = mysqli_query($koneksi, "select * from level");
+                        $query = mysqli_query($koneksi, "select * from kategori");
                         while ($data = mysqli_fetch_array($query)) {
                         ?>
-                    <option value="<?php echo $data['id_level'];?>">
-                      <?php echo $data['level'];?>
+                    <option value="<?php echo $data['id_kategori'];?>">
+                      <?php echo $data['kategori'];?>
                     </option>
                     <?php } ?>
                   </select>
@@ -180,16 +177,35 @@
                   <input type="file" id="gambar" required />
                 </td>
               </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="id_pengajar">Pengajar</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <select name="id_pengajar">
+                    <?php
+                        $query = mysqli_query($koneksi, "select * from level");
+                        while ($data = mysqli_fetch_array($query)) {
+                        ?>
+                    <option value="<?php echo $data['id_level'];?>">
+                      <?php echo $data['level'];?>
+                    </option>
+                    <?php } ?>
+                  </select>
+                </td>
+              </tr>
             </table>
-            <table align="center">
+            <table>
               <tr>
                 <td>
-                  <div class="submit">
+                  <div class="button">
                     <input type="reset" value="Reset" />
                   </div>
                 </td>
                 <td>
-                  <div class="submit">
+                  <div class="button">
                     <input type="submit" value="Tambah" name="tambah" />
                   </div>
                 </td>
@@ -213,5 +229,7 @@
       </center>
     </footer>
     <script src="../JS/navbar.js"></script>
+    <script src="../JS/idx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>
